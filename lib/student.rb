@@ -15,7 +15,7 @@ class Student < InteractiveRecord
     table_info.each do |column|
       column_name << column["name"]
     end
-    column.names.compact
+    column_names.compact
   end
   
 end

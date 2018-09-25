@@ -56,7 +56,7 @@ class InteractiveRecord
   def self.find_by(attribute_hash)
     attribute = attribute_hash.values.first
     sql = "SELECT * FROM students WHERE name = '#{attribute}'"
-        DB[:conn].execute(sql)
+    found =  DB[:conn].execute(sql)
             binding.pry
 
   end

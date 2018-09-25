@@ -55,7 +55,7 @@ class InteractiveRecord
   
   def self.find_by(attribute_hash)
     binding.pry
-    attribute = attribute_hash.values.to_s
+    attribute = attribute_hash.values
     sql = "SELECT * FROM self.#{attribute} WHERE name = #{attribute} OR"
         DB[:conn].execute(sql)
   end

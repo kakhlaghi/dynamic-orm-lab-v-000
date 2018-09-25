@@ -55,7 +55,7 @@ class InteractiveRecord
   
   def self.find_by(attribute_hash)
     attribute = attribute_hash.values.first
-    class_control = attribute.class == String ? '#{attribute}' : attribute
+    class_control = attribute.class == String ? "'#{attribute}'" : attribute
     sql = "SELECT * FROM #{self.table_name} WHERE #{attribute_hash.keys.first} = #{class_control}"
     DB[:conn].execute(sql)
     

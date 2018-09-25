@@ -57,6 +57,8 @@ class InteractiveRecord
     attribute = attribute_hash.values.first
     sql = "SELECT * FROM students WHERE name = '#{attribute}'"
         DB[:conn].execute(sql)
+            binding.pry
+
   end
 
 end

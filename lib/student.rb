@@ -13,7 +13,7 @@ class Student < InteractiveRecord
     table_info = DB[:conn].execute(sql)
     column_names = []
     table_info.each do |column|
-      column_name << 
+      column_name << column["name"]
   end
   
 end
